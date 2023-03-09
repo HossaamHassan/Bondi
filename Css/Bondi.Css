@@ -148,3 +148,10 @@ body {
 }
 
 /* End Portfolio */
+
+/* Start About */
+.about .desc {
+    max-width: 500px;
+}
+
+/* End About */
