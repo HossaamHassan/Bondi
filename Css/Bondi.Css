@@ -99,3 +99,52 @@ body {
 }
 
 /* End Features */
+
+/* Start Portfolio */
+.portfolio {
+    background-color: var(--section-color);
+}
+
+.portfolio ul li {
+    padding: 0.5rem 1rem;
+    transition: var(--main-transition);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.portfolio ul .active {
+    background-color: var(--red);
+    color: var(--yellow);
+}
+
+.portfolio ul li:hover:not(.active) {
+    color: var(--red);
+}
+
+.portfolio .box {
+    padding: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio .box::before {
+    content: attr(data-work);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2bd1cccf;
+    color: white;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    font-weight: bold;
+    font-size: 1.3rem;
+    transform: translateX(calc(-100% - 5px));
+    transition: var(--main-transition);
+}
+
+.portfolio .box:hover::before {
+    transform: translateX(0);
+}
+
+/* End Portfolio */
